@@ -36,17 +36,16 @@ def guardar_vector(vector, contador):
 
 
 def obtener_fecha():
-    # Aqui se pide la fecha en modo cadena
-    # En modo int o float para el decimal no funciona
+    # Tal cual del programa principal, 0 cambios.
     year = input("Ingrese el año: ")
     mes = input("Ingrese el mes: ")
     dia = input("Ingrese el día: ")
     hora = input("Ingrese la hora: ")
 
-    # Obtener los archivos para la fecha proporcionada
+    # Dar los datos que tengamos seguro.
     archivos = buscar_archivo(year, mes, dia, hora)
 
-    # Procesar los archivos encontrados
+    # Creacion del nuevo .npy
     contador = 1
     for ruta_archivo in archivos:
         vector = extraer_vector(ruta_archivo)
@@ -57,7 +56,7 @@ def obtener_fecha():
     if not archivos:
         print(f"No se encontraron archivos para la fecha proporcionada.")
 
-    # Mensaje para indicar el final de la búsqueda
+    # flag para mi, por si va mal la iteración.
     print("Se termina de buscar")
 
 
