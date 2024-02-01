@@ -2,6 +2,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def plot_signal(signal, fs):
     # Plotear la señal en el dominio del tiempo y la frecuencia.
     n = len(signal)
@@ -23,6 +24,7 @@ def plot_signal(signal, fs):
 
     plt.show()
 
+
 def plotear_archivo(archivo):
     directorio = os.path.join(os.path.dirname(__file__), 'original_signal')
 
@@ -40,6 +42,7 @@ def plotear_archivo(archivo):
 
     # Plotear la señal
     plot_signal(vector, fs)
+
 
 # Llamada a la función principal
 if __name__ == "__main__":
