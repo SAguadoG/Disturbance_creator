@@ -4,6 +4,7 @@ import numpy as np
 # Obtener el directorio actual del script
 directorio_actual = os.path.abspath(os.path.dirname(__file__))
 
+
 def swell_generator():
     for i in range(3601):
         nombre_archivo = f"or_s_{i}.npy"
@@ -41,5 +42,6 @@ def swell_generator():
             print(f"Señal amplificada guardada en {nombre_archivo_nuevo}")
         else:
             print(f"No se encontró el archivo {nombre_archivo}")
+
 
 swell_generator()
