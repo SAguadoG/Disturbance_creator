@@ -8,9 +8,9 @@ directorio_actual = os.path.abspath(os.path.dirname(__file__))
 
 def plot_swell_signal():
     # Nombre del archivo a graficar
-    nombre_archivo = "int_s_937.npy"
+    nombre_archivo = "flicker_s_1.npy"
     # Obtener la ruta completa al archivo
-    ruta_archivo = os.path.join(directorio_actual, 'interruption_signals', nombre_archivo)
+    ruta_archivo = os.path.join(directorio_actual, 'flicker_signals', nombre_archivo)
 
     # Verificar si el archivo existe
     if os.path.exists(ruta_archivo):
