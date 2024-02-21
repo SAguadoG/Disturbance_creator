@@ -62,28 +62,18 @@ def harmonic_sag_generator():
                 factor_amplitud)
 
             if i < 2521:
-                directorio_destino = os.path.join(directorio_actual, 'train')
-                os.makedirs(directorio_destino, exist_ok=True)
-                nombre_archivo_nuevo = f"hrc_sg_s_{i}.npy"
-                ruta_archivo_nuevo = os.path.join(directorio_destino, nombre_archivo_nuevo)
-                np.save(ruta_archivo_nuevo, signal_with_harmonic_and_sag)
-                print(f"Señal con armónico guardada en {nombre_archivo_nuevo}")
-            if 2521 <= i < 3061:
                 directorio_destino = os.path.join(directorio_actual, 'test')
-                os.makedirs(directorio_destino, exist_ok=True)
-                nombre_archivo_nuevo = f"hrc_sg_s{i}.npy"
-                ruta_archivo_nuevo = os.path.join(directorio_destino, nombre_archivo_nuevo)
-                np.save(ruta_archivo_nuevo, signal_with_harmonic_and_sag)
-                print(f"Señal con armónico guardada en {nombre_archivo_nuevo}")
-            if 3061 <= i < 3601:
-                directorio_destino = os.path.join(directorio_actual, 'val')
-                os.makedirs(directorio_destino, exist_ok=True)
-                nombre_archivo_nuevo = f"hrc_sg_s_{i}.npy"
-                ruta_archivo_nuevo = os.path.join(directorio_destino, nombre_archivo_nuevo)
-                np.save(ruta_archivo_nuevo, signal_with_harmonic_and_sag)
-                print(f"Señal con armónico guardada en {nombre_archivo_nuevo}")
+            elif i < 3061:
+                directorio_destino = os.path.join(directorio_actual, 'train')
+            elif i < 3601:
+                directorio_destino = os.path.join(directorio_actual, 'train')
             else:
                 print(f"No se encontró el archivo {nombre_archivo}")
+
+            nombre_archivo_nuevo = f"hrc_s_{i}.npy"
+            ruta_archivo_nuevo = os.path.join(directorio_destino, nombre_archivo_nuevo)
+            np.save(ruta_archivo_nuevo, signal_with_harmonic_and_sag)
+            print(f"Señal con armónico y Sag guardada en {nombre_archivo_nuevo}")
 
         else:
             print("archivo no encontrado")
