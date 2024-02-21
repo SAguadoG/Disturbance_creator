@@ -8,9 +8,9 @@ directorio_actual = os.path.abspath(os.path.dirname(__file__))
 
 def plot_harmonic_signal():
     # Nombre del archivo a graficar
-    nombre_archivo = "hrc_sw_s_3062.npy"
+    nombre_archivo = "or_s_4.npy"
     # Obtener la ruta completa al archivo
-    ruta_archivo = os.path.join(directorio_actual, 'val', nombre_archivo)
+    ruta_archivo = os.path.join(directorio_actual, 'original_signals', nombre_archivo)
 
     # Verificar si el archivo existe
     if os.path.exists(ruta_archivo):
@@ -25,6 +25,7 @@ def plot_harmonic_signal():
         plt.title('Señal en el Dominio del Tiempo')
         plt.xlabel('Muestras')
         plt.ylabel('Amplitud')
+        plt.xlim(3000, 5000)  # Establecer el rango de muestras desde 3000 hasta 5000
 
         # Calcular la transformada de Fourier de la señal
         fft_result = np.fft.fft(data)
@@ -49,3 +50,4 @@ def plot_harmonic_signal():
 
 
 plot_harmonic_signal()
+
