@@ -8,7 +8,7 @@ directorio_actual = os.path.abspath(os.path.dirname(__file__))
 
 def plot_harmonic_signal():
     # Nombre del archivo a graficar
-    nombre_archivo = "hrc_s_3062.npy"
+    nombre_archivo = "hrc_sw_s_3062.npy"
     # Obtener la ruta completa al archivo
     ruta_archivo = os.path.join(directorio_actual, 'val', nombre_archivo)
 
