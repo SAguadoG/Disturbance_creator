@@ -71,7 +71,6 @@ def harmonic_interruption_generator():
             ruta_archivo_nuevo = os.path.join(directorio_destino, nombre_archivo_nuevo)
             np.save(ruta_archivo_nuevo, signal_with_harmonic_and_interruption)
             print(f"Señal con armónico y Swell guardada en {nombre_archivo_nuevo}")
-
         else:
             print("archivo no encontrado")
 
